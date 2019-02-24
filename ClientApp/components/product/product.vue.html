@@ -1,0 +1,41 @@
+<template>
+    <div>
+        <div v-show="openEditMode">
+            <editProduct v-on:closePopup="closePopup" :pProduct="productSelected"></editProduct>
+        </div>
+        <div v-show="!openEditMode">
+            <h1>List Products</h1>
+            <button v-if="!pageLoading" @click="addNewProduct" class="btn btn-default">Add New</button>
+            <table v-if="!pageLoading" class="table">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Created Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="pProduct in listProducts">
+                        <td style="width:70px">
+                            <span class="glyphicon glyphicon-pencil" v-on:click="editClick(pProduct)" title="Edit" ></span>
+                            &nbsp;
+                            <span class="glyphicon glyphicon-trash" v-on:click="deleteClick(pProduct)" title="Delete" ></span>
+                        </td>
+                        <td>{{ pProduct.Id }}</td>
+                        <td>{{ pProduct.Name }}</td>
+                        <td>{{ pProduct.Description }}</td>
+                        <td>{{ pProduct.CreatedDate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p v-else>
+                <em>Loading...</em>
+            </p>
+        </div>
+    </div>
+</template>
+
+<script src="./product.ts"></script>
+<style src="./product.css" scoped></style>

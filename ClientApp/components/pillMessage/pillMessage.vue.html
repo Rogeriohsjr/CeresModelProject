@@ -1,0 +1,12 @@
+<template>
+    <div>
+        <div v-if="MessageType == 1" class="alert alert-danger" role="alert">
+            {{ Message }}
+        </div>
+        <div v-if="MessageType == 2" class="alert alert-success" role="alert">
+            {{ Message }}
+        </div>
+    </div>
+</template>
+<script src="./pillMessage.ts"></script>
+<style src="./pillMessage.css" scoped></style>

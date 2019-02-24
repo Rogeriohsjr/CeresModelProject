@@ -1,0 +1,9 @@
+<template>
+    <div v-show="ShowSpinner">
+        <spinner size="medium" message="Loading..."></spinner>
+        {{ListProcessing}}
+    </div>
+</template>
+
+<script src="./loader.ts"></script>
+<style src="./loader.css" scoped></style>

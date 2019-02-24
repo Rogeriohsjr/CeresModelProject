@@ -1,0 +1,30 @@
+<template>
+    <div>
+        <loader :ppListProcessName="listProcess"></loader>
+        <pillMessage :ppMessage="errorMessage"></pillMessage>
+
+        <div class="header">
+            <h1>Login</h1>
+            <div class="left">
+                <label for="username">Username</label>
+            </div>
+            <div class="right">
+                <input type="text" id="username" v-model="username" />
+            </div>
+            <div class="left">
+                <label for="password">Password</label>
+            </div>
+            <div class="right">
+                <input type="password" id="password" v-model="password" />
+            </div>
+            <br>
+            <div>
+                <button @click="loginClick" class="btn btn-default">Login</button>&nbsp;
+                <button @click="registerClick" class="btn btn-default">Register</button>&nbsp;
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="./login.ts"></script>
+<style src="./login.css" scoped></style>

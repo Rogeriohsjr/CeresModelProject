@@ -1,0 +1,48 @@
+<template>
+    <div>
+        <loader :ppListProcessName="listProcess"></loader>
+        <pillMessage :ppMessage="errorMessage"></pillMessage>
+
+        <div class="header">
+            <h1>Create a new User</h1>
+            <div class="left">
+                <label for="username">First Name</label>
+            </div>
+            <div class="right">
+                <input type="text" id="firstName" v-model="firstName" />
+            </div>
+            <div class="left">
+                <label for="username">Last Name</label>
+            </div>
+            <div class="right">
+                <input type="text" id="lastName" v-model="lastName" />
+            </div>
+            <div class="left">
+                <label for="username">Email</label>
+            </div>
+            <div class="right">
+                <input type="text" id="email" v-model="email" />
+            </div>
+            <div class="left">
+                <label for="username">Username</label>
+            </div>
+            <div class="right">
+                <input type="text" id="username" v-model="email" readonly="true" />
+            </div>
+            <div class="left">
+                <label for="password">Password</label>
+            </div>
+            <div class="right">
+                <input type="password" id="password" v-model="password"  />
+            </div>
+            <br>
+            <div>
+                <button @click="createUserClick" class="btn btn-default">Looks good, create my user.</button>&nbsp;
+                <button @click="backToLoginClick" class="btn btn-default">I have a user.</button>&nbsp;
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="./register.ts"></script>
+<style src="./register.css" scoped></style>

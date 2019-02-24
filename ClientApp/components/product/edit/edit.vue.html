@@ -1,0 +1,37 @@
+<template>
+    <div class="input-group">
+        <h1 v-show="!newRecord">Edit Product # {{pProductEdit.Id}}</h1>
+        <h1 v-show="newRecord">Add New Product</h1>
+
+        <div class="left">
+            <label>Name</label>
+        </div>
+        <div class="right">
+            <input type="text" v-model="pProductEdit.Name" class="form-control"/>
+        </div>
+
+        <div class="left">
+            <label>Description</label>
+        </div>
+        <div class="right">
+            <input type="text" v-model="pProductEdit.Description" class="form-control"/>
+        </div>
+
+        <div class="left" v-show="!newRecord">
+            <label>Created Date</label>
+        </div>
+        <div class="right" v-show="!newRecord">
+            <input type="text" v-model="pProductEdit.CreatedDate" class="form-control" readonly="true"/>
+        </div>
+
+        <br>
+        <div>
+            <button v-show="newRecord" @click="addObject" class="btn btn-default">Save</button>&nbsp;
+            <button v-show="!newRecord" @click="updateObject" class="btn btn-default">Update</button>&nbsp;
+            <button @click="closeEditor" class="btn btn-default">Cancel</button>
+        </div>
+    </div>
+</template>
+
+<script src="./edit.ts"></script>
+<style src="./edit.css" scoped></style>
