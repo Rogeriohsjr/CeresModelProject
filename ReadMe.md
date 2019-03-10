@@ -8,16 +8,16 @@
 1. Vuejs - v2.5
 2. bootstrap - v3.3
 
+# How to use
 
-# .Net Command
+1. Download it in any folder
+2. Open that folder in VSCode
+3. Run *npm install*
+4. Run *dotnet publish*
+5. Run *dotnet run*
+You should the first page with no error.
 
-*dotnet publish*
-*dotnet run*
-
-
-# Publish to Production
-*dotnet publish --output publish*
-
+To login you will need to create the tables
 
 # Creating and Updating Database
 1. Install Database
@@ -38,4 +38,13 @@ Source: https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/new-db?t
 
 Source: https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/new-field?view=aspnetcore-2.2&tabs=visual-studio-code
 
+# .Net Command to remember
 
+*dotnet publish*
+
+*dotnet run*
+
+# Publish to Production
+*dotnet publish --output publish*
+
+Copy all the files in your server that are in the Publish folder inside of your project.
