@@ -17,16 +17,27 @@
 5. Run *dotnet run*
 You should the first page with no error.
 
-To login you will need to create the tables
+Here you should see Ceres loading on http://localhost:5000.
+
+To login you will need to create the tables, do the steps below.
+
+# Configuring AppSettings.JSON
+1. We will need to change the appsettings.json, before create a database.
+
+Secret -> add new information there, could be anything.
+
+On ConnectionStrings, change from CeresDB to YourDatabaseName.
+Go to Startup.cs and search for "Configuration.GetConnectionString", and change from CeresDB to YourDatabaseName.
 
 # Creating and Updating Database
 1. Install Database
+
+These commands will create a Database and Create the Tables.
 
 *dotnet ef migrations add InitialCreate*
 
 *dotnet ef database update*
 
-These commands will create a Database and Create the Tables.
 
 Source: https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/new-db?tabs=netcore-cli
 
